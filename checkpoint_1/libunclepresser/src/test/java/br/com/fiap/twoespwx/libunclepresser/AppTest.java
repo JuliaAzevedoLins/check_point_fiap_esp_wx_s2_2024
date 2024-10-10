@@ -1,38 +1,26 @@
 package br.com.fiap.twoespwx.libunclepresser;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import br.com.fiap.twoespwx.libunclepresser.App;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
+public class AppTest {
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testCompressData() {
+        // Testa a compressão de uma sequência de caracteres
+        assertEquals("A4C3T2G1", App.compressData("AAAACCCTTG"));
+        assertEquals("G2A2C2T2C2", App.compressData("GGAACCTTCC"));
+        assertEquals("G10", App.compressData("GGGGGGGGGG"));
+        assertEquals("T1G8C1", App.compressData("TGGGGGGGGC"));
+        
+        // Testa a compressão de uma sequência vazia
+        assertEquals("", App.compressData(""));
+        
+        // Testa a compressão de uma sequência com um único caractere
+        assertEquals("A1", App.compressData("A"));
+        
+        // Testa a compressão de uma sequência sem caracteres repetidos
+        assertEquals("A1B1C1D1", App.compressData("ABCD"));
     }
 }
