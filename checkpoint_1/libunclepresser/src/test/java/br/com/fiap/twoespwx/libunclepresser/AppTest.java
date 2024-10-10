@@ -24,3 +24,4 @@ public class AppTest {
         assertEquals("A1B1C1D1", App.compressData("ABCD"));
     }
 }
+
