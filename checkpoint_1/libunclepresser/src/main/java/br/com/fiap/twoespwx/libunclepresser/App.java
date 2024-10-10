@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 
 public class App {
     public static void main(String[] args) {
-        System.out.println("LIB UNCLE PRESSER - GRUPO BATATA-DOCE");
+        System.out.println("LIB UNCLE PRESSER - GRUPO JULIA, LUIS E VICTOR");
 
         if (args.length != 2) {
             System.err.println("Uso: java -jar <path/to/jar/file> <path/to/input> <path/to/output>");
@@ -28,7 +28,7 @@ public class App {
 
             // Exibe os detalhes da compressão
             System.out.printf("-----------------------------------------------------------\n");
-            System.out.printf("| LIB UNCLE PRESSER - GRUPO BATATA-DOCE                   |\n");
+            System.out.printf("| LIB UNCLE PRESSER - GRUPO JULIA, LUIS E VICTOR          |\n");
             System.out.printf("|---------------------------------------------------------|\n");
             System.out.printf("| INPUT FILE NAME: %s                                     |\n", inputPath);
             System.out.printf("| OUTPUT FILE NAME: %s                                    |\n", outputPath);
